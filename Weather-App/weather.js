@@ -43,7 +43,7 @@ const color = document.querySelector('.color')
 cities.forEach( (city) =>{
     city.addEventListener('click', (e) =>{
 cityInput = e.target.textContent;
-console.log(e.target.textContent)
+
 fetchWeatherData();
 
 //Remove the page content
