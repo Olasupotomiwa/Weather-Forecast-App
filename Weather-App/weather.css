@@ -255,18 +255,18 @@ transition: ease-in-out .3s;
 
 @media screen and (max-width: 500px) {
     html{
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .city-time h1{
         
         margin-bottom: 0.2em;
-        font-size: 1.3em;
+        font-size: 1.5em;
        
      }
      
      .temp{
-         font-size: 13vmin;
+         font-size: 14vmin;
         
      }
      
