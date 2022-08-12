@@ -37,7 +37,7 @@ const color = document.querySelector('.color')
 
 
 //Default city onload
- let cityInput = "Ibadan"
+ let cityInput = "Abuja"
 
  //Loop through the cities to append a click event to target the innerHTML
 cities.forEach( (city) =>{
