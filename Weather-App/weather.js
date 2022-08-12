@@ -195,7 +195,7 @@ function fetchWeatherData(){
         ) {
             app.style.backgroundImage = `url(${timeofday}/rainy.jpg)`
             app.style.color = 'white'
-            btn.style.background = "black"
+            btn.style.background = "rgba(0, 0, 0, 0.7)"
             btn.style.color = 'black'
            
         }
