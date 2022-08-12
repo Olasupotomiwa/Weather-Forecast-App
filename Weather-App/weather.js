@@ -128,14 +128,14 @@ function fetchWeatherData(){
         let timeofday ="day"
         if(!data.current.is_day == 1){
             timeofday = "night";
-            btn.style.background = "white"
+            btn.style.background = "rgba(0, 0, 0, 0.5)"
             btn.style.color = 'black'   
         }
         const code = data.current.condition.code;
 
         if(code == 1000 && data.current.is_day == 1){
             btn.style.background = "#00294d"
-            btn.style.color = 'white'
+            btn.style.color = 'rgba(0, 0, 0, 0.5)'
             app.style.color = '#00294d'
            
            
@@ -212,7 +212,7 @@ function fetchWeatherData(){
        
     })
     .catch(() =>{
-        alert('City not found');
+        alert('City not found \n Ensure you have a stable internet connection');
         loader.style.display = 'none'
         app.style.display = 'block'
     })
