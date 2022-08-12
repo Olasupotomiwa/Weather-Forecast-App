@@ -1,0 +1,547 @@
+html{
+    font-size: 16px;
+    font-family: 'News Cycle', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #111;
+
+}
+
+#WholeContent{
+  display: none;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1, h3, small{
+    font-weight: 600;
+}
+
+.weather-app{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2) ), url("day/cloudy.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    transition: 500ms;
+    opacity: 1;
+}
+
+
+
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2em 3em 4em 1em;
+    overflow-x: hidden;
+}
+
+.base{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    padding: 10px;
+   
+}
+.city-time,
+.temp
+.weather
+{
+margin: 0 1em;
+}
+
+.city-time h1{
+   margin: 0px 4px; 
+   margin-bottom: 0.2em;
+   font-size: 2.3vw;
+   font-family: 'Fjalla One', sans-serif;
+}
+
+.temp{
+    font-size: 7vw;
+    margin: 0px;
+    font-family: 'Bebas Neue', cursive;
+   
+}
+
+.weather img{
+    display: block;
+    margin: 0.5em;
+    
+  
+}
+
+.condition{
+    font-size: 1.5vw;
+}
+
+.panel{
+   position: absolute; 
+   width: 40%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   background: rgba(0, 0, 0, 0.4);
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3 );
+   border: 1px solid rgba(225, 225, 225, 0.18);
+   z-index: 1;
+   backdrop-filter: blur(7px);
+   -webkit-backdrop-filter: blur(10px);
+   padding: 3em 2em;
+   overflow-y: scroll;
+   
+}
+
+.panel form{
+    margin-bottom: 3em; 
+    border: none;
+    outline: none;
+}
+
+.submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    margin: 0;
+    border: none ;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1.2em;
+    z-index: 900;
+    background-color: #fa6d1b;
+    color: #fff;
+}
+.submit img{
+  width: 20px;
+}
+
+
+
+.search{
+    background: none;
+    border: none;
+    border-bottom: 1px #ccc solid ;
+    padding: 0 1em 0.5em 0;
+    width: 80%;
+    color: white;
+    font-size: 1.1em;
+}
+
+.search:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px #ccc solid
+}
+.search::placeholder{
+    color: white;
+    font-size: 12px;
+} 
+
+.panel ul{
+    padding: 0 0 .5em 0;
+    color:  #cce7ff;
+    border-bottom: 1px #ccc solid;
+}
+
+.panel ul li{
+  color: white; 
+  margin: 1em 0; 
+ 
+}
+.credit{
+  color: white;
+}
+
+.panel ul li img{
+ margin-right: 10px;
+}
+
+.panel ul h4{
+    margin: 1em 0;
+
+
+}
+
+.city{
+display: block;
+cursor: pointer;
+transition: ease-in-out .3s;
+}
+
+
+.city:hover{
+  font-weight: bold;
+}
+
+.details li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.credit{
+    padding: 0px;
+    margin: 0px;
+   
+}
+
+.social{
+  color: white;
+  padding: 5px 10px 0px 0px;
+  text-decoration: none;
+  margin-bottom: -10px;
+ 
+}
+
+.social:hover{
+  color: white;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    html{
+        font-size: 15px;
+    }
+   .panel, .container{
+    position: relative;
+    width: 100%;
+    top: initial;
+    height: auto;
+    overflow-y: hidden;
+    
+   } 
+   .container{
+    align-items:  center;
+   }
+
+
+   .city-time h1{
+        
+    margin-bottom: 0.2em;
+    font-size: 1.7em;
+   
+ }
+ 
+ .temp{
+     font-size: 5em;
+    
+    
+ }
+
+ .condition{
+    font-size: 13px;
+  
+ }
+ 
+
+
+    
+}
+
+@media screen and (max-width: 500px) {
+    html{
+        font-size: 13px;
+    }
+
+    .city-time h1{
+        
+        margin-bottom: 0.2em;
+        font-size: 1.3em;
+       
+     }
+     
+     .temp{
+         font-size: 13vmin;
+        
+     }
+     
+   
+
+}
+
+@media screen and (max-width: 350px) {
+    html{
+        font-size: 12px;
+    }
+
+    .city-time h1{
+        
+        margin-bottom: 0.2em;
+        font-size: 1.2em;
+     }
+     
+     .temp{
+         font-size: 10vmin;
+        
+     }
+
+     body{
+        min-width: 290px;
+     }
+     
+   
+
+}
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
+
+
+
+  .lds-ripple {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+  
+ 
+  .preloader {
+    position: absolute;
+    margin-left: -55px;
+    margin-top: -100px;
+    height: 110px;
+    width: 110px;
+    left: 50%;
+    top: 50%;
+  } 
+
+
+
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("day/loading...jpg");;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 500ms;
+}
+
+.loader {
+	position: absolute;
+	margin-left: -55px;
+	margin-top: -100px;
+	height: 110px;
+	width: 110px;
+	left: 50%;
+	top: 50%;
+  display: none;
+}
+
+svg {
+  width: 110px;
+  height: 110px;
+}
+
+path {
+  stroke: #9ea1a4;
+  stroke-width: 0.25;
+  fill: #241E20;
+}
+
+#cloud {
+  position: relative;
+  z-index: 2;
+}
+
+#cloud path {
+  fill: #efefef;
+}
+
+#sun {
+  margin-left: -10px;
+  margin-top: 6px;
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 45px;
+  top: 15px;
+  z-index: 1;
+  
+  animation-name: rotate;
+  animation-duration: 16000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#sun path {
+  stroke-width: 0.18;
+  fill: #9ea1a4;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* Rain */
+.rain {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-top: -32px;
+  margin-left: 19px;
+}
+
+.drop {
+  opacity: 1;
+  background: #9ea1a4;
+  display: block;
+  float: left;
+  width: 3px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0px 0px 6px 6px;
+  
+  animation-name: drop;
+  animation-duration: 350ms;
+  animation-iteration-count: infinite;
+}
+
+.drop:nth-child(1) {
+  animation-delay: -130ms;
+}
+
+.drop:nth-child(2) {
+  animation-delay: -240ms;
+}
+
+.drop:nth-child(3) {
+  animation-delay: -390ms;
+}
+
+.drop:nth-child(4) {
+  animation-delay: -525ms;
+}
+
+.drop:nth-child(5) {
+  animation-delay: -640ms;
+}
+
+.drop:nth-child(6) {
+  animation-delay: -790ms;
+}
+
+.drop:nth-child(7) {
+  animation-delay: -900ms;
+}
+
+.drop:nth-child(8) {
+  animation-delay: -1050ms;
+}
+
+.drop:nth-child(9) {
+  animation-delay: -1130ms;
+}
+
+.drop:nth-child(10) {
+  animation-delay: -1300ms;
+}
+
+
+@keyframes drop {
+  50% {
+    height: 45px;
+    opacity: 0;
+  }
+
+  51% {
+    opacity: 0;
+  }
+
+  100% {
+    height: 1px;
+    opacity: 0;
+  }
+}
+
+.text {
+  font-family: 'News Cycle', sans-serif;
+	letter-spacing: 1px;
+	text-align: center;
+	margin-left: -43px;
+	font-weight: bold;
+	margin-top: 20px;
+	font-size: 11px;
+	color: white;
+	width: 200px;
+}
