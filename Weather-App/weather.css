@@ -247,6 +247,9 @@ transition: ease-in-out .3s;
     font-size: 13px;
   
  }
+.panel{
+  padding: 2em 2em;
+ }
  
 
 
