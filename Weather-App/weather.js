@@ -212,7 +212,7 @@ function fetchWeatherData(){
        
     })
     .catch(() =>{
-        alert('City not found \n Ensure you have a stable internet connection');
+        alert('City not found \nEnsure you have a stable internet connection');
         loader.style.display = 'none'
         app.style.display = 'block'
     })
