@@ -82,7 +82,7 @@ form.addEventListener('submit', (e) => {
 
 //Function to fetch data
 function fetchWeatherData(){
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=1c549b7566ba478d84e142723220312&q=${cityInput}&days=2`)
+    fetch(`http://api.weatherapi.com/v1/forecast.json?key=aff02922238c4e58b9565524230203&q=${cityInput}&days=2`)
     .then(response =>{
        
         return response.json();
